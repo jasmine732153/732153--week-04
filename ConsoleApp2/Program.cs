@@ -9,7 +9,20 @@ namespace ConsoleApp2
     class Program
     {
         static void Main(string[] args)
-        {
+        
+          
+
+       
+            {
+
+            }
+
+            class village
+            {
+                public village nextvillage;
+                public string villagename;
+                public bool isaAstrildeHere = false;
+            }
         }
     }
-}
+
