@@ -14,6 +14,7 @@ namespace ConsoleApp2
 
 
         {
+            countryside blue = new countryside();
 
         }
 
@@ -34,10 +35,15 @@ namespace ConsoleApp2
             village ajax = new village();
             village first;
             village last;
+            village Temp;
+          
 
 
             public void launch()
             {
+               
+                first = maple;
+                last = ajax;
                 maple.villagename = "maple";
                 maple.nextvillage = toronto;
                 toronto.villagename = "toronto";
@@ -46,8 +52,25 @@ namespace ConsoleApp2
                 ajax.villagename = "ajax";
                 ajax.nextvillage = null;
                 ajax.nextvillage = toronto;
+                Console.WriteLine( this.displaymap());
             }
+            public string displaymap()
+            {
+                string listofcities = "";
+                
+                    listofcities = listofcities + first.villagename + "---";
+                    Temp = first.nextvillage;
+                  listofcities = listofcities + Temp.villagename + "---";
+
+
+                return listofcities;
+            }
+          
         }
+
+
+        
     }
+    
 
 }
